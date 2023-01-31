@@ -1,11 +1,37 @@
 ﻿// Homework 6.3.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
+#include <string.h>
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Task 1.\n";
+
+	char str[100];
+	std::cin >> str;
+	std::cout << str[1];
+
+	std::cout << "\n\nTask 2.\n";
+
+	char str2[100];
+	std::cin >> str2;
+	int q = strlen(str2);
+	std::cout << q << "\n";
+	char temp = str2[0];
+	str2[0] = str2[q-1];
+	str2[q-1] = temp;
+	std::cout << str2;
+
+	std::cout << "\n\nTask 3.\n";
+
+	char str3[100];
+	std::cin >> str3;
+	std::cin >> q;
+	for (int j = q - 1; j < strlen(str3); j++)
+	{
+		str3[j] = str3[j + 1];
+	}
+	std::cout << str3;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
